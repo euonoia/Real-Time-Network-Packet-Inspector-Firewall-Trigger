@@ -142,10 +142,6 @@ pip install -r requirements.txt
 ### Run the Program
 
 ``` bash
-source /venv/bin/activate   
-```
-
-``` bash
 sudo ./venv/bin/python inspector.py
 ```
 
