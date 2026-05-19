@@ -41,11 +41,3 @@ def unblock_timer(target_ip, delay):
         if target_ip in BLOCKED_IPS:
             BLOCKED_IPS.remove(target_ip)
             print(f"[*] Cooldown ended: {target_ip} removed from internal blocklist.")
-
-if __name__ == "__main__":
-    print("[*] Real-Time Packet Inspector Active. Listening for ICMP traffic...")
-    try:
-        sniff(filter="icmp", prn=packet_inspector, store=0)
-    except KeyboardInterrupt:
-        print("\n[*] Shutting down inspector.")
-        sys.exit(0)

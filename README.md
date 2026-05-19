@@ -142,7 +142,7 @@ pip install -r requirements.txt
 ### Run the Program
 
 ``` bash
-sudo ./venv/bin/python inspector.py
+sudo ./venv/bin/python main.py
 ```
 
 Purpose: - Runs the packet inspector with elevated privileges - Root
