@@ -1,11 +1,10 @@
-import sys
 from scapy.all import sniff
-from detector import packet_inspector
+from src.inspector import packet_inspector
+
+def main():
+    print("[*] Starting IPS Sniffer... Press Ctrl+C to stop.")
+    # Sniff network traffic and pass it to our inspector module
+    sniff(prn=packet_inspector, store=0)
 
 if __name__ == "__main__":
-    print("[*] Real-Time Packet Inspector Active. Listening for ICMP traffic...")
-    try:
-        sniff(filter="icmp", prn=packet_inspector, store=0)
-    except KeyboardInterrupt:
-        print("\n[*] Shutting down inspector.")
-        sys.exit(0)
+    main()
